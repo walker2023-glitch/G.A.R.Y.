@@ -1,40 +1,42 @@
-# HUMAN.exe — The World's Least Reasonable CAPTCHA
+# HUMAN.exe — G.A.R.Y.'s Enhanced Human Verification
 
-A comedic, webcam-controlled CAPTCHA inspired by the escalating absurdity of Studio C's *Bop It* sketch. This is an original parody-style interactive experience, not a reproduction of the sketch.
+An original satirical browser game inspired by the escalating absurdity of Studio C's *Bop It* sketch. This is not a reproduction of the sketch or a real authentication service.
 
-## Buildathon path
-**Useless** — an intentionally unnecessary and entertaining verification system.
-
-## Approved tool
-**MediaPipe** Pose and Face Mesh (via CDN), used meaningfully to detect human gestures in real time.
+## Buildathon
+- **Path:** Useless
+- **Approved library:** MediaPipe Pose and Face Mesh (via jsDelivr CDN)
+- **AI assistance:** ChatGPT/Codex used to help write and revise source code; all behavior should be reviewed and tested by the submitter.
 
 ## Run
-From this folder:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000` in a modern browser, allow camera access, and click **Begin Verification**. Internet access is required to load MediaPipe scripts and model files from jsDelivr. No API key is needed.
+Visit http://localhost:8000 in a modern desktop browser, click the parody CAPTCHA, then **BEGIN VERIFICATION**. Grant webcam permission. Internet access is needed for MediaPipe. HTTPS or localhost is required for webcam access.
 
-## Challenges
-1. Raise both hands above your head.
-2. Tilt your head.
-3. Flap both arms twice.
-4. Hold still.
-5. Get rejected anyway.
+## Features
+- Ordinary CAPTCHA-style landing screen that transforms into a futuristic security system.
+- G.A.R.Y. (General Authentication and Recognition Yardstick) introduces the experience.
+- **Free, local browser speech synthesis**, with a voice selector using voices installed on the user's browser/operating system. No ElevenLabs or API keys.
+- Webcam-detected commands: RAISE, TILT, WAVE, FREEZE, FLAP, SALUTE, BOOGIE, BEG, and DOUBT.
+- 50% chance of a fictional **LICK IT!** final boss. **Never lick your device**; the challenge resolves without contact.
+- Secret independent-thought ending after three consecutive timed-out challenges while the player remains visible.
+- Standard comedic failure ending after completing all regular challenges.
 
-The app draws tracked landmarks and uses text-to-speech for absurd instructions. All camera processing happens in-browser; the app does not upload video.
-
-## Demo checklist
-- Test webcam and all four gestures in your actual lighting/camera setup.
-- Record a **5–10 minute demo** explaining the project, the Useless path, MediaPipe, and what you learned.
-- Push source to a **public GitHub repository** with development history.
-- Disclose AI assistance and MediaPipe CDN usage in your submission.
-- Test public video and repository links in an incognito window.
+## Privacy
+Camera processing is local to the browser. The app does not upload or save webcam footage. MediaPipe scripts and model assets are fetched from jsDelivr.
 
 ## Known limitations
-- Gesture thresholds are heuristic; camera position and lighting affect reliability.
-- The chicken-flapping detector counts two up-to-down cycles; don't hold the arms up continuously.
-- Speech synthesis voice depends on browser/OS.
-- This is entertainment, not actual human authentication.
+- Gestures use heuristics and are sensitive to lighting, framing, camera position, and browser performance.
+- A missed gesture may be mistaken for refusal. The secret ending is deliberately comedic, not a scientifically reliable judgment of intent.
+- Voice selection varies by operating system and browser. Some browsers may delay or block speech until a user interaction.
+- The game is a parody, not an actual CAPTCHA or biometric identity verification system.
+
+## Submission checklist
+- Test all gestures and the voice in a real browser.
+- Verify both possible finale paths over multiple runs.
+- Record a 5–10 minute demo showing working functionality and explaining MediaPipe and the Useless path.
+- Include a public GitHub repository with development history.
+- Disclose major external resources and AI assistance.
+- Test public links in an incognito window.
